@@ -27,40 +27,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-//   function getQuote() {
-//     //http request to API endpoint
-//     fetch(API)
-//       .then((response) => response.json())
-//       .then((data) => {
-//         //extract the quote, character and author
-//         const anime = data.anime;
-//         const character = data.character;
-//         const quote = data.quote;
+  function getQuote() {
+    //http request to API endpoint
+    fetch(API)
+      .then((response) => response.json())
+      .then((data) => {
+        //extract the quote, character and author
+        const anime = data.anime;
+        const character = data.character;
+        const quote = data.quote;
 
-//         //create element to hold quote, character and author
-//         const quoteElement = document.createElement("p");
-//         quoteElement.innerHTML = `"${quote}" - ${anime} - ${character}`;
+        //create element to hold quote, character and author
+        const quoteElement = document.createElement("p");
+        quoteElement.innerHTML = `"${quote}" - ${anime} - ${character}`;
 
-//         //bind event listeners to the share, save and like buttons
-//         document.getElementById("quote-of-the-day").appendChild(quoteElement);
+    //     //bind event listeners to the share, save and like buttons
+    //     document.getElementById("quote-of-the-day").appendChild(quoteElement);
         
-//         document.getElementById("btn-share").addEventListener("click", () => {
-//             //code to share quotes
-//         });
-//         document.getElementById("btn-save").addEventListener("click", () => {
-//             //code to save quotes 
-//         });
-//         document.getElementById("btn-like").addEventListener("click", () => {
-//             //code to like quotes
-//         });
-//       });
-//   }
-//   //calls getQuote function 
-//   getQuote();
+    //     document.getElementById("btn-share").addEventListener("click", () => {
+    //         //code to share quotes
+    //     });
+    //     document.getElementById("btn-save").addEventListener("click", () => {
+    //         //code to save quotes 
+    //     });
+    //     document.getElementById("btn-like").addEventListener("click", () => {
+    //         //code to like quotes
+    //     });
+    //   });
+  }
+  //calls getQuote function 
+  getQuote();
 
-//   //bind event listener to generate quote button
-//   document.getElementById('btn-generate').addEventListener('click', () => {
-//     //when button is clicked gets new quote
-//     getQuote();
-//   });
-// });
+  //bind event listener to generate quote button
+  document.getElementById('btn-generate').addEventListener('click', () => {
+    //when button is clicked gets new quote
+    getQuote();
+  });
+});
