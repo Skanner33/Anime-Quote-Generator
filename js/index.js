@@ -41,19 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const quoteElement = document.createElement("p");
         quoteElement.innerHTML = `"${quote}" - ${anime} - ${character}`;
 
-    //     //bind event listeners to the share, save and like buttons
-    //     document.getElementById("quote-of-the-day").appendChild(quoteElement);
+        //bind event listeners to the share, save and like buttons
+        document.getElementById("quote-of-the-day").appendChild(quoteElement);
         
-    //     document.getElementById("btn-share").addEventListener("click", () => {
-    //         //code to share quotes
-    //     });
-    //     document.getElementById("btn-save").addEventListener("click", () => {
-    //         //code to save quotes 
-    //     });
-    //     document.getElementById("btn-like").addEventListener("click", () => {
-    //         //code to like quotes
-    //     });
-    //   });
+        document.getElementById("btn-share").addEventListener("click", () => {
+            //code to share quotes
+        });
+        document.getElementById("btn-save").addEventListener("click", () => {
+            //code to save quotes 
+        });
+        document.getElementById("btn-like").addEventListener("click", () => {
+            //code to like quotes
+        });
+      });
   }
   //calls getQuote function 
   getQuote();
