@@ -49,9 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         document.getElementById("btn-save").addEventListener("click", () => {
             //code to save quotes 
+            const quote = document.querySelector('#quote-of-the-day p').textContent;
+
+            localStorage.setItem("savedQuote", quote);
+            console.log("Quote saved");
         });
+
+        let likeCount = 0;
         document.getElementById("btn-like").addEventListener("click", () => {
             //code to like quotes
+            likeCount ++;
+            console.log('Quote liked ${likeCount} times')
+
+            document.getElementById("like-count").textContent = likeCount;
+        });
+
+        const btnCopy = document.getElementById("btn-copy");
+
+        btnCopy.addEventListener("click", () => {
+            const quoteElement = document.querySelector("#quote-of-the-day p");
+            const quoteText = quoteElement.textContent;
+
+            navigator.clipboard.writeText(quoteText).then(() => {
+                console.log("QUote copied");
+            }).catch(error => {
+                console.error('failed to copy', error);
+            });
         });
       });
   }
