@@ -15,13 +15,9 @@ h2{
 /* Set the font for the entire page */
 body {
     font-family: Arial, sans-serif;
+    background-color: lightgray;
   }
   
-  /* Set the font size and color for the quote of the day heading */
-  h3.days {
-    font-size: 18px;
-    color: #333333;
-  }
   
   /* Set the font size and color for the quote text */
   #quote-of-the-day p {
