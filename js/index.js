@@ -4,7 +4,8 @@ const API = "https://animechan.vercel.app/api/random";
 const pagelist = document.getElementById("pagelist");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("btn");
+  //log in functionality
+    const btn = document.getElementById("btn");
 
   btn.addEventListener("click", () => {
     const form = document.getElementById("log-form");
@@ -27,6 +28,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+   //sign up functionality
+   const bUtn = document.getElementById("BUTN");
+
+   bUtn.addEventListener("click", () => {
+     const form = document.getElementById("signup-form");
+ 
+     if (form.style.display === "none") {
+       form.style.display = "block";
+     } else {
+       form.style.display = "none";
+     }
+   });
+ 
+
+
+   const signupBtn = document.getElementById("signup-btn");
+   const signupForm = document.getElementById("signup-form");
+
+   signupBtn.addEventListener("click", () => {
+  if (signupForm.style.display === "none") {
+    signupForm.style.display = "block";
+  } else {
+    signupForm.style.display = "none";
+  }
+});
+
+
   function getQuote() {
     //http request to API endpoint
     fetch(API)
@@ -43,46 +71,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //bind event listeners to the share, save and like buttons
         document.getElementById("quote-of-the-day").appendChild(quoteElement);
-        
+
         document.getElementById("btn-share").addEventListener("click", () => {
-            //code to share quotes
+          //code to share quotes
         });
         document.getElementById("btn-save").addEventListener("click", () => {
-            //code to save quotes 
-            const quote = document.querySelector('#quote-of-the-day p').textContent;
+          //code to save quotes
+          const quote = document.querySelector(
+            "#quote-of-the-day p"
+          ).textContent;
 
-            localStorage.setItem("savedQuote", quote);
-            console.log("Quote saved");
+          localStorage.setItem("savedQuote", quote);
+          console.log("Quote saved");
         });
 
         let likeCount = 0;
         document.getElementById("btn-like").addEventListener("click", () => {
-            //code to like quotes
-            likeCount ++;
-            console.log('Quote liked ${likeCount} times')
+          //code to like quotes
+          likeCount++;
+          console.log("Quote liked ${likeCount} times");
 
-            document.getElementById("like-count").textContent = likeCount;
+          document.getElementById("like-count").textContent = likeCount;
         });
+
+        const copyMessage =  document.createElement('p');
+        copyMessage.id = 'copy-message';
 
         const btnCopy = document.getElementById("btn-copy");
 
         btnCopy.addEventListener("click", () => {
-            const quoteElement = document.querySelector("#quote-of-the-day p");
-            const quoteText = quoteElement.textContent;
+          const quoteElement = document.querySelector("#quote-of-the-day p");
+          const quoteText = quoteElement.textContent;
 
-            navigator.clipboard.writeText(quoteText).then(() => {
-                console.log("QUote copied");
-            }).catch(error => {
-                console.error('failed to copy', error);
+          navigator.clipboard
+            .writeText(quoteText)
+            .then(() => {
+              console.log("QUote copied");
+            })
+            .catch((error) => {
+              console.error("failed to copy", error);
             });
         });
+        document.getElementById('quote-actions').appendChild(copyMessage);
       });
   }
-  //calls getQuote function 
+  //calls getQuote function
   getQuote();
 
   //bind event listener to generate quote button
-  document.getElementById('btn-generate').addEventListener('click', () => {
+  document.getElementById("btn-generate").addEventListener("click", () => {
     //when button is clicked gets new quote
     getQuote();
   });
