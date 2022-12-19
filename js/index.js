@@ -5,7 +5,7 @@ const pagelist = document.getElementById("pagelist");
 
 document.addEventListener("DOMContentLoaded", () => {
   //log in functionality
-    const btn = document.getElementById("btn");
+  const btn = document.getElementById("btn");
 
   btn.addEventListener("click", () => {
     const form = document.getElementById("log-form");
@@ -28,32 +28,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-   //sign up functionality
-   const bUtn = document.getElementById("BUTN");
+  //sign up functionality
+  const bUtn = document.getElementById("BUTN");
 
-   bUtn.addEventListener("click", () => {
-     const form = document.getElementById("signup-form");
- 
-     if (form.style.display === "none") {
-       form.style.display = "block";
-     } else {
-       form.style.display = "none";
-     }
-   });
- 
+  bUtn.addEventListener("click", () => {
+    const form = document.getElementById("signup-form");
 
+    if (form.style.display === "none") {
+      form.style.display = "block";
+    } else {
+      form.style.display = "none";
+    }
+  });
 
-   const signupBtn = document.getElementById("signup-btn");
-   const signupForm = document.getElementById("signup-form");
+  const signupBtn = document.getElementById("signup-btn");
+  const signupForm = document.getElementById("signup-form");
 
-   signupBtn.addEventListener("click", () => {
-  if (signupForm.style.display === "none") {
-    signupForm.style.display = "block";
-  } else {
-    signupForm.style.display = "none";
-  }
-});
-
+  signupBtn.addEventListener("click", () => {
+    if (signupForm.style.display === "none") {
+      signupForm.style.display = "block";
+    } else {
+      signupForm.style.display = "none";
+    }
+  });
 
   function getQuote() {
     //http request to API endpoint
@@ -86,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         let likeCount = 0;
+
         document.getElementById("btn-like").addEventListener("click", () => {
           //code to like quotes
           likeCount++;
@@ -94,8 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("like-count").textContent = likeCount;
         });
 
-        const copyMessage =  document.createElement('p');
-        copyMessage.id = 'copy-message';
+        const copyMessage = document.createElement("p");
+        copyMessage.id = "copy-message";
 
         const btnCopy = document.getElementById("btn-copy");
 
@@ -112,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
               console.error("failed to copy", error);
             });
         });
-        document.getElementById('quote-actions').appendChild(copyMessage);
+        document.getElementById("quote-actions").appendChild(copyMessage);
       });
   }
   //calls getQuote function
