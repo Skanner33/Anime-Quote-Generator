@@ -9,6 +9,15 @@
 } 
 
 /* main page */
+.container-fluid .navbar-brand {
+    color: rgb(0, 255, 13);
+    padding-left: 10px;
+    font-style: italic;
+    cursor: none;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
 h2{
     text-align: center;
 }
@@ -47,3 +56,7 @@ body {
   #btn-save {
     background-color: #f1c40f;
   }  
+
+  #signup-form .form-container{
+    min-width: 100px;
+  }
