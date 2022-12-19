@@ -1,6 +1,6 @@
 /* body{background: url("../images/quotes.jpg")} */
 
-/* .bg{background: url("../images/plainblack.jpg") no-repeat; width: 100%; height: 100vh;} */
+/* .bg{background: url("../images/plainblack.jpg") no-repeat; width: 100%; height: 100vh;} 
 
 .form-container{border: 0px solid #fff; padding: 50px 60px; margin-top: 20vh;
  -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
@@ -8,7 +8,7 @@
  box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
 } 
 
-/* main page */
+/* main page 
 .container-fluid .navbar-brand {
     color: rgb(0, 255, 13);
     padding-left: 10px;
@@ -21,20 +21,20 @@
 h2{
     text-align: center;
 }
-/* Set the font for the entire page */
+/* Set the font for the entire page *
 body {
     font-family: Arial, sans-serif;
     background-color: lightgray;
   }
   
   
-  /* Set the font size and color for the quote text */
+  /* Set the font size and color for the quote text *
   #quote-of-the-day p {
     font-size: 14px;
     color: #666666;
   }
   
-  /* Style the buttons */
+  /* Style the buttons *
   #quote-actions button {
     display: inline-block;
     margin: 10px;
@@ -46,13 +46,13 @@ body {
     cursor: pointer;
   }
   
-  /* Style the "Share" button */
+  /* Style the "Share" button *
   #btn-share {
     background-color: #3498db;
     color: #ffffff;
   }
   
-  /* Style the "Save" button */
+  /* Style the "Save" button *
   #btn-save {
     background-color: #f1c40f;
   }  
@@ -60,3 +60,89 @@ body {
   #signup-form .form-container{
     min-width: 100px;
   }
+
+  /* Add some basic styling to the navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  /* Style the search form and button */
+  .form-inline {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-control {
+    width: 300px;
+  }
+  
+  /* Style the login and sign up forms */
+  .form-container {
+    max-width: 400px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto;
+  }
+  
+  /* Add some basic styling to the login and sign up form rows */
+  .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style the left and right columns */
+  .col-md-4,
+  .col-sm-4,
+  .col-xs-12 {
+    background-color: #f1f1f1;
+  }
+/* Add some basic styling to the page */
+.page {
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  /* Style the container element */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  /* Style the quote of the day element */
+  #quote-of-the-day {
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 20px 0;
+  }
+  
+  /* Style the quote actions element */
+  #quote-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style the quote action buttons */
+  #quote-actions button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  #quote-actions button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+    
