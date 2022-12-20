@@ -68,10 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //bind event listeners to the share, save and like buttons
         document.getElementById("quote-of-the-day").appendChild(quoteElement);
+        
+        const link = encodeURI(window.location.href);
+const msg = encodeURIComponent('Hey, I found this article');
+const title = encodeURIComponent('Article or Post Title Here');
 
-        document.getElementById("btn-share").addEventListener("click", () => {
+const fb = document.querySelector('.facebook');
+fb.href = `https://www.facebook.com/share.php?u=${link}`;
+
+const twitter = document.querySelector('.twitter');
+twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+
+const linkedIn = document.querySelector('.linkedin');
+linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${link}`;
+
+const reddit = document.querySelector('.reddit');
+reddit.href = `http://www.reddit.com/submit?url=${link}&title=${title}`;
+        //document.getElementById("btn-share").addEventListener("click", () => {
           //code to share quotes
-        });
+        //});
         document.getElementById("btn-save").addEventListener("click", () => {
           //code to save quotes
           const quote = document.querySelector(
@@ -92,25 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("like-count").textContent = likeCount;
         });
 
-        const copyMessage = document.createElement("p");
-        copyMessage.id = "copy-message";
-
-        const btnCopy = document.getElementById("btn-copy");
-
-        btnCopy.addEventListener("click", () => {
-          const quoteElement = document.querySelector("#quote-of-the-day p");
-          const quoteText = quoteElement.textContent;
-
-          navigator.clipboard
-            .writeText(quoteText)
-            .then(() => {
-              console.log("QUote copied");
-            })
-            .catch((error) => {
-              console.error("failed to copy", error);
-            });
-        });
-        document.getElementById("quote-actions").appendChild(copyMessage);
+        function copyToClipboard() {
+          navigator.clipboard.writeText(quoteElement);
+        }
+        copyToClipboard("quoteElement")
       });
   }
   //calls getQuote function
