@@ -5,12 +5,12 @@
 .form-container{border: 0px solid #fff; padding: 50px 60px; margin-top: 20vh;
  -webkit-box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
  -moz-box-shadow : -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
- box-shadow: -1px 4px 26px 11px rgba(0, 0, 0, 0.75);
+ box-shadow: -1px 4px 26px 11px rgba(75, 4, 4, 0.75);
 } 
 
 /* main page */
 .container-fluid .navbar-brand {
-    color: rgb(0, 255, 13);
+    color: rgb(95, 5, 12);
     padding-left: 10px;
     font-style: italic;
     cursor: none;
@@ -18,20 +18,22 @@
     text-transform: uppercase;
     font-weight: bolder;
 }
-h2{
-    text-align: center;
+h3{
+  text-align: center;
+  color: rgb(236, 127, 127);
+    
 }
 /* Set the font for the entire page */
 body {
     font-family: Arial, sans-serif;
-    background-color: lightgray;
+    background:  url("../images/plainblack.jpg")
   }
   
   
   /* Set the font size and color for the quote text */
   #quote-of-the-day p {
-    font-size: 14px;
-    color: #666666;
+    font-size: 15px;
+    color: #fff;
   }
   
   /* Style the buttons */
@@ -71,8 +73,7 @@ body {
 #share-buttons i {
   font-size: 100px;
   margin: 20px;
-  display: flex;
-  justify-content: center;
+  
 }
 .facebook {
       color: #3b5998;
