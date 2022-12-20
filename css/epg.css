@@ -46,7 +46,7 @@ body {
     cursor: pointer;
   }
   
-  /* Style the "Share" button */
+  /* Style the "Share" button *
   #btn-share {
     background-color: #3498db;
     color: #ffffff;
@@ -60,89 +60,35 @@ body {
   #signup-form .form-container{
     min-width: 100px;
   }
-
-  /* Add some basic styling to the navbar *
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  
-  /* Style the search form and button *
-  .form-inline {
-    display: flex;
-    align-items: center;
-  }
-  
-  .form-control {
-    width: 300px;
-  }
-  
-  /* Style the login and sign up forms *
-  .form-container {
-    max-width: 400px;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: auto;
-  }
-  
-  /* Add some basic styling to the login and sign up form rows *
-  .row {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Style the left and right columns *
-  .col-md-4,
-  .col-sm-4,
-  .col-xs-12 {
-    background-color: #f1f1f1;
-  }
-/* Add some basic styling to the page *
-.page {
-    font-family: sans-serif;
-    color: #333;
-  }
-  
-  /* Style the container element *
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
-  }
-  
-  /* Style the quote of the day element *
-  #quote-of-the-day {
-    font-size: 1.5em;
-    font-style: italic;
-    margin: 20px 0;
-  }
-  
-  /* Style the quote actions element *
-  #quote-actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  /* Style the quote action buttons *
-  #quote-actions button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  #quote-actions button:hover {
-    background-color: #333;
-    color: #fff;
-  }
     
+#share-container span {
+  display: block;
+  margin: 3rem auto;
+  font-size: 50px;
+  padding: 1rem;
+  margin: 1rem;
+}
+#share-buttons i {
+  font-size: 100px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.facebook {
+      color: #3b5998;
+}
+.twitter {
+    color: #55acee;
+}
+.linkedin {
+    color: #0077b5;
+}
+.reddit {
+    color: #cb2027;
+}
+.facebook, .twitter, .linkedin, .reddit {
+  opacity: 0.6;
+}
+.facebook:hover, .twitter:hover, .linkedin:hover, .reddit:hover {
+  opacity: 0.9;
+}
