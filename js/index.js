@@ -107,10 +107,15 @@ reddit.href = `http://www.reddit.com/submit?url=${link}&title=${title}`;
           document.getElementById("like-count").textContent = likeCount;
         });
 
-        function copyToClipboard() {
-          navigator.clipboard.writeText(quoteElement);
-        }
-        copyToClipboard("quoteElement")
+        function myFunction(){
+          const quoteElement = document.getElementById("quoteElement");
+
+          quoteElement.select();
+          quoteElement.setSelectionRange(0, 99999);
+
+          navigator.clipboard.writeText(quoteElement.value);
+          alert("Copied the text:" + quoteElement.value);
+        } 
       });
   }
   //calls getQuote function
